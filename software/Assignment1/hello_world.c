@@ -10,7 +10,6 @@
 #define NUMBER_OF_TIMEOUT_VALUES 6
 // ENUMS
 enum OpperationMode {Mode1 = 1, Mode2 = 2, Mode3 = 3, Mode4 = 4};
-enum LightColour {Red = 1, Yellow = 2, Green = 3};
 
 // Function declarations
 void UpdateMode(enum OpperationMode *currentMode);
@@ -25,6 +24,7 @@ void timeout_data_handler(enum OpperationMode *currentMode);
 void ResetAllStates(void);
 int InSafeState (void);
 int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+void nextState(void);
 
 
 
@@ -54,14 +54,18 @@ alt_u32 tlc_timer_isr(void* context) {
 	switch ((*currentMode)) {
 	case Mode1:
 		simple_tlc();
+		nextState();
 		break;
 	case Mode2:
 		pedestrian_tlc();
+		nextState();
 		break;
 	case Mode3:
 		configurable_tlc(currentMode);
+		nextState();
 		break;
 	case Mode4:
+		nextState();
 		break;
 	}
 
@@ -189,8 +193,6 @@ void simple_tlc() {
 		currentTimeOut = t5;
 		break;
 	}
-	CurrentState++;
-	CurrentState = CurrentState%6;
 }
 
 void init_buttons_pio(void* context) {
@@ -199,6 +201,10 @@ void init_buttons_pio(void* context) {
 	alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
 }
 
+void nextState(void){
+	CurrentState++;
+	CurrentState = CurrentState%6;
+}
 void pedestrian_tlc(void) {
 	//Main logic for Mode 2.
 	int current_red_led = IORD_ALTERA_AVALON_PIO_DATA(LEDS_RED_BASE);
@@ -253,8 +259,6 @@ void pedestrian_tlc(void) {
 			currentTimeOut = t5;
 			break;
 		}
-		CurrentState++;
-		CurrentState = CurrentState%6;
 }
 
 
@@ -290,8 +294,8 @@ void NSEW_ped_isr(void* context, alt_u32 id) {
 }
 
 void configurable_tlc(enum OpperationMode *currentMode){
-	timeout_data_handler(currentMode);
 	pedestrian_tlc();
+	timeout_data_handler(currentMode);
 }
 
 void timeout_data_handler(enum OpperationMode *currentMode){
@@ -302,7 +306,8 @@ void timeout_data_handler(enum OpperationMode *currentMode){
 			if ((modeSwitchValue & 1<<17)) { // Check if switch 17 is asserted high (Indicating new timeout values).
 				if (fp != NULL) { //Ensure the serial connection is valid.
 					//TODO: Stop the timer.
-					char New_Timeout[NEW_TIMEOUT_LENGTH] = "1000,1000,1000,1000,1000,1000,1000\n";
+					//char New_Timeout[NEW_TIMEOUT_LENGTH] = "500,500,500,500,500,500\n";
+					char New_Timeout[NEW_TIMEOUT_LENGTH] = "pwoeirhfjvpwoeirhfjvpwoeirhfjvpwoeirhdfj";
 					int New_Timeout_Index = 0;
 					int valid_new_timeout = 0;
 					while (!valid_new_timeout){ //Keep receiving timeout updates untill a valid sequence is received.
