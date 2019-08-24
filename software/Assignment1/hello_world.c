@@ -40,7 +40,7 @@ volatile int t2 = 2000;
 volatile int t3 = 500;
 volatile int t4 = 6000;
 volatile int t5 = 2000;
-volatile int currentTimeOut = 0;
+volatile int currentTimeOut = 6000;
 // Pedestrian flags
 volatile int EW_Ped = 0;
 volatile int NS_Ped = 0;
@@ -48,6 +48,7 @@ volatile int NS_Ped = 0;
 volatile FILE* fp;
 
 alt_u32 tlc_timer_isr(void* context) {
+	printf("Timer expiered\n");
 	enum OpperationMode *currentMode = (unsigned int*) context;
 	UpdateMode(currentMode);
 
@@ -79,7 +80,7 @@ int main() {
 	enum OpperationMode currentMode = Mode1;
 	lcd_set_mode(currentMode);
 	void* CurrentModeContex = (void*) &currentMode;
-	alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+	alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex); //Start the timer
 	init_buttons_pio(CurrentModeContex);
 	fp = fopen(UART_NAME, "r+");
 	ResetAllStates();
@@ -305,14 +306,21 @@ void timeout_data_handler(enum OpperationMode *currentMode){
 			unsigned int modeSwitchValue = IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE);
 			if ((modeSwitchValue & 1<<17)) { // Check if switch 17 is asserted high (Indicating new timeout values).
 				if (fp != NULL) { //Ensure the serial connection is valid.
-					//TODO: Stop the timer.
-					//char New_Timeout[NEW_TIMEOUT_LENGTH] = "500,500,500,500,500,500\n";
-					char New_Timeout[NEW_TIMEOUT_LENGTH] = "pwoeirhfjvpwoeirhfjvpwoeirhfjvpwoeirhdfj";
+					printf("Stoped the timer\n");
+					alt_alarm_stop(&timer);//Stop the timer.
+
+					char New_Timeout[NEW_TIMEOUT_LENGTH] = "500,500,500,500,500,500\n"; //Valid
+					//char New_Timeout[NEW_TIMEOUT_LENGTH] = "pwoeirhfjvpwoeirhfjvpwoeirhfjvpwoeirhdfj"; //Invalid
 					int New_Timeout_Index = 0;
 					int valid_new_timeout = 0;
 					while (!valid_new_timeout){ //Keep receiving timeout updates untill a valid sequence is received.
 						New_Timeout_Index = 6; //TODO: Set this back to 0 and reset New_Timeout to "".
 						char letter = '0';
+
+						//TODO: This is just to test blocking loop. Remove.
+						while(IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) & 1<<16){
+							;
+						}
 //						while(letter != 'n'){ //Keep retreiving new values untill the \n value is received.
 //							if (New_Timeout_Index >= NEW_TIMEOUT_LENGTH){
 //								break; //Got too many characters without a \n to be valid.
@@ -331,6 +339,8 @@ void timeout_data_handler(enum OpperationMode *currentMode){
 						printf("\n");
 					}
 					// TODO: start the timer again.
+					void* CurrentModeContex = (void*) currentMode;
+					alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex);
 				}
 			}
 		}

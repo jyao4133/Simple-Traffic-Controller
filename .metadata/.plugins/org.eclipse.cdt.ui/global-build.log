@@ -277,3 +277,778 @@ Info: Building ../Assignment1_bsp/
 D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
 [BSP build complete]
 [Assignment1 build complete]
+13:30:03 **** Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:309:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);//Stop the timer.
+                     ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:328:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:317:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c:337:22: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex);    }
+                      ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:349:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:349:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:365:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+Info: Linking Assignment1.elf
+nios2-elf-g++  -T'../Assignment1_bsp//linker.x' -msys-crt0='../Assignment1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Assignment1_bsp/   -Wl,-Map=Assignment1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Assignment1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert Assignment1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Jacob/Desktop/CS303-A1" --sopcinfo C:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp/../../nios2_system.sopcinfo
+Info: (Assignment1.elf) 83 KBytes program size (code + initialized data).
+Info:                   8101 KBytes free for stack + heap.
+Info: Creating Assignment1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Assignment1.elf >Assignment1.objdump
+[Assignment1 build complete]
+13:30:06 **** Incremental Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+[Assignment1 build complete]
+13:31:10 **** Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:310:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);//Stop the timer.
+                     ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:329:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:350:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:350:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:366:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:381:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [obj/default/hello_world.o] Error 1
+13:31:11 **** Incremental Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:310:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);//Stop the timer.
+                     ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:329:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:350:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:350:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:366:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:381:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [obj/default/hello_world.o] Error 1
+13:32:54 **** Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:329:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:350:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:350:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:366:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:381:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [obj/default/hello_world.o] Error 1
+13:32:56 **** Incremental Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:329:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:350:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:350:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:366:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:381:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [obj/default/hello_world.o] Error 1
+13:34:41 **** Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:329:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:350:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:350:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:366:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:381:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [obj/default/hello_world.o] Error 1
+13:34:42 **** Incremental Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:329:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:350:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:350:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:366:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:381:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [obj/default/hello_world.o] Error 1
+13:35:53 **** Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:309:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);//Stop the timer.
+                     ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:328:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:317:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c:337:22: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex);    }
+                      ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:349:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:349:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:365:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+Info: Linking Assignment1.elf
+nios2-elf-g++  -T'../Assignment1_bsp//linker.x' -msys-crt0='../Assignment1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Assignment1_bsp/   -Wl,-Map=Assignment1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Assignment1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert Assignment1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Jacob/Desktop/CS303-A1" --sopcinfo C:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp/../../nios2_system.sopcinfo
+Info: (Assignment1.elf) 83 KBytes program size (code + initialized data).
+Info:                   8101 KBytes free for stack + heap.
+Info: Creating Assignment1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Assignment1.elf >Assignment1.objdump
+[Assignment1 build complete]
+13:35:56 **** Incremental Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+[Assignment1 build complete]
+13:36:31 **** Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:310:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);//Stop the timer.
+                     ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:329:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c:338:22: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex);    }
+                      ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:350:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:350:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:366:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+Info: Linking Assignment1.elf
+nios2-elf-g++  -T'../Assignment1_bsp//linker.x' -msys-crt0='../Assignment1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Assignment1_bsp/   -Wl,-Map=Assignment1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Assignment1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert Assignment1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Jacob/Desktop/CS303-A1" --sopcinfo C:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp/../../nios2_system.sopcinfo
+Info: (Assignment1.elf) 83 KBytes program size (code + initialized data).
+Info:                   8101 KBytes free for stack + heap.
+Info: Creating Assignment1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Assignment1.elf >Assignment1.objdump
+[Assignment1 build complete]
+13:36:34 **** Incremental Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+[Assignment1 build complete]
+13:36:50 **** Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:310:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);//Stop the timer.
+                     ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:329:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:350:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:350:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:366:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:381:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [obj/default/hello_world.o] Error 1
+13:36:52 **** Incremental Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:310:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);//Stop the timer.
+                     ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:329:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:350:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:350:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:366:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:381:1: error: expected declaration or statement at end of input
+ }
+ ^
+make: *** [obj/default/hello_world.o] Error 1
+13:37:23 **** Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, LIGHT_TRANSITION_TIME, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:310:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);//Stop the timer.
+                     ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:329:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:351:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:351:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:367:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+Info: Linking Assignment1.elf
+nios2-elf-g++  -T'../Assignment1_bsp//linker.x' -msys-crt0='../Assignment1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Assignment1_bsp/   -Wl,-Map=Assignment1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Assignment1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert Assignment1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Jacob/Desktop/CS303-A1" --sopcinfo C:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp/../../nios2_system.sopcinfo
+Info: (Assignment1.elf) 83 KBytes program size (code + initialized data).
+Info:                   8101 KBytes free for stack + heap.
+Info: Creating Assignment1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Assignment1.elf >Assignment1.objdump
+[Assignment1 build complete]
+13:37:26 **** Incremental Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+[Assignment1 build complete]
+13:39:47 **** Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:310:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);//Stop the timer.
+                     ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:329:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c:338:22: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex);
+                      ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:351:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:351:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:367:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+Info: Linking Assignment1.elf
+nios2-elf-g++  -T'../Assignment1_bsp//linker.x' -msys-crt0='../Assignment1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Assignment1_bsp/   -Wl,-Map=Assignment1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Assignment1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert Assignment1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Jacob/Desktop/CS303-A1" --sopcinfo C:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp/../../nios2_system.sopcinfo
+Info: (Assignment1.elf) 83 KBytes program size (code + initialized data).
+Info:                   8101 KBytes free for stack + heap.
+Info: Creating Assignment1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Assignment1.elf >Assignment1.objdump
+[Assignment1 build complete]
+13:39:50 **** Incremental Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+[Assignment1 build complete]
+13:41:41 **** Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Assignment1_bsp//HAL/inc -I../Assignment1_bsp/ -I../Assignment1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:83:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:202:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:310:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);//Stop the timer.
+                     ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:332:43: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+       valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                           ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:318:12: warning: unused variable 'letter' [-Wunused-variable]
+       char letter = '0';
+            ^
+hello_world.c:341:22: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex);
+                      ^
+In file included from hello_world.c:3:0:
+../Assignment1_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:354:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:354:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:370:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+Info: Linking Assignment1.elf
+nios2-elf-g++  -T'../Assignment1_bsp//linker.x' -msys-crt0='../Assignment1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Assignment1_bsp/   -Wl,-Map=Assignment1.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Assignment1.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert Assignment1.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/Jacob/Desktop/CS303-A1" --sopcinfo C:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp/../../nios2_system.sopcinfo
+Info: (Assignment1.elf) 83 KBytes program size (code + initialized data).
+Info:                   8101 KBytes free for stack + heap.
+Info: Creating Assignment1.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Assignment1.elf >Assignment1.objdump
+[Assignment1 build complete]
+13:41:43 **** Incremental Build of configuration Nios II for project Assignment1 ****
+make all 
+Info: Building ../Assignment1_bsp/
+D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
+[BSP build complete]
+[Assignment1 build complete]

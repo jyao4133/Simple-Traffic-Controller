@@ -1,9 +1,9 @@
-13:17:33 **** Incremental Build of configuration Nios II for project Assignment1 ****
+13:41:43 **** Incremental Build of configuration Nios II for project Assignment1 ****
 make all 
 Info: Building ../Assignment1_bsp/
 D:/Programs/QuartusPrime/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Assignment1_bsp/
 [BSP build complete]
 [Assignment1 build complete]
 
-13:17:34 Build Finished (took 869ms)
+13:41:44 Build Finished (took 871ms)
 
