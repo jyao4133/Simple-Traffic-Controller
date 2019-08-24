@@ -6,6 +6,7 @@
 
 // #Defines
 #define LIGHT_TRANSITION_TIME 1000
+#define CAMERA_TIMEOUT 2000
 #define NEW_TIMEOUT_LENGTH 40
 #define NUMBER_OF_TIMEOUT_VALUES 6
 // ENUMS
@@ -25,21 +26,27 @@ void ResetAllStates(void);
 int InSafeState (void);
 int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
 void nextState(enum OpperationMode *currentMode);
-
+void camera_tlc(enum OpperationMode *currentMode);
+void handle_vehicle_button(enum OpperationMode *currentMode);
+alt_u32 camera_timer_isr(void* context, alt_u32 id);
+void takeSnapshot(void);
 
 
 // Global variables
 volatile alt_alarm timer;
+volatile alt_alarm CameraTimer;
+volatile int camera_has_started = 0;
+volatile int even_button = 0;
 volatile int timer_has_started = 0;
 // Mode variables
 volatile int CurrentState = 0;
 // Different timers
-volatile int t0 = 500;
-volatile int t1 = 6000;
-volatile int t2 = 2000;
-volatile int t3 = 500;
-volatile int t4 = 6000;
-volatile int t5 = 2000;
+volatile int t0 = 9000;
+volatile int t1 = 9000;
+volatile int t2 = 9000;
+volatile int t3 = 9000;
+volatile int t4 = 9000;
+volatile int t5 = 9000;
 volatile int currentTimeOut = 6000;
 // Pedestrian flags
 volatile int EW_Ped = 0;
@@ -61,7 +68,7 @@ int main() {
 	alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex); //Start the timer
 	timer_running = 1;
 	init_buttons_pio(CurrentModeContex);
-	fp = fopen(UART_NAME, "r");
+	fp = fopen(UART_NAME, "r+");
 	ResetAllStates();
 	printf("Got past uart open.\n");
 	int New_Timeout_Index = 0;
@@ -70,26 +77,14 @@ int main() {
 	//printf("currentMode %d\n", *currentMode);
 
 	while(1){
-
 		//timeout_data_handler(&currentMode);
-
 		letter = fgetc(fp);
-		printf("%c \n", letter);
-
 		if (recieve_new_shit == 1) {
-//			if (timer_running == 1){
-//				timer_running = 0;
-//				//alt_alarm_stop(&timer);//Stop the timer.
-//			}
 
-			//char New_Timeout[NEW_TIMEOUT_LENGTH] = "500,500,500,500,500,500\n"; //Valid
 			if (!valid_new_timeout){ //Keep receiving timeout updates untill a valid sequence is received.
 
-				//TODO: This is just to test blocking loop. Remove.
-	//						while(IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) & 1<<16){
-	//							;
-	//						}
-				if(letter != 'n'){ //Keep retreiving new values untill the \n value is received.
+
+				if(letter != '\r' && letter != '\n' && letter != '\n\r'){ //Keep retreiving new values untill the \n value is received.
 					if (New_Timeout_Index >= NEW_TIMEOUT_LENGTH){
 						New_Timeout_Index = 0;
 						memset(New_Timeout, 0, sizeof(New_Timeout));
@@ -99,29 +94,24 @@ int main() {
 					//letter = fgetc(fp);
 					New_Timeout[New_Timeout_Index] = letter;
 					New_Timeout_Index++;
-					printf("%c\t", letter);
 					printf("New Timout: %s\n", New_Timeout);
 
 				} else {
 					printf("input to parse: %s\n", New_Timeout);
 					valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
-					// TODO: Parse the new timeout.
 					if (!valid_new_timeout){
 						printf("Didnt pass parse");
 					}
 
 					New_Timeout_Index = 0;
-//					for (int i = 0; i<NEW_TIMEOUT_LENGTH; i++){
-//						New_Timeout[i] = "\n";
-//					}
+
 					memset(New_Timeout, 0, sizeof(New_Timeout));
 
 
-					printf("THIS IS THE TIMEOUT ARRAY: %s\n", New_Timeout);
 
 				}
 			} else {
-				// TODO: start the timer again.
+
 				printf("Restarting the timer\n");
 				timeout_data_handler(&currentMode);
 				printf("THIS IS RECEIEVE NEW SHIT N: %d\n", recieve_new_shit);
@@ -134,8 +124,7 @@ int main() {
 				}
 			}
 		}
-		printf("Reached the end of main\n");
-		printf("Currentmode after main: %d\n", currentMode);
+
 	}
 
 
@@ -143,7 +132,6 @@ int main() {
 }
 
 alt_u32 tlc_timer_isr(void* context) {
-	printf("Timer expiered\n");
 	enum OpperationMode *currentMode = (unsigned int*) context;
 	UpdateMode(currentMode);
 	timeout_data_handler(currentMode);
@@ -161,6 +149,7 @@ alt_u32 tlc_timer_isr(void* context) {
 		nextState(currentMode);
 		break;
 	case Mode4:
+		camera_tlc(currentMode);
 		nextState(currentMode);
 		break;
 	}
@@ -276,12 +265,12 @@ void simple_tlc() {
 
 void init_buttons_pio(void* context) {
 	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(KEYS_BASE, 0); // enable interrupts for buttons
-	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(KEYS_BASE, 0x3); // enable interrupts for two right buttons.
+	IOWR_ALTERA_AVALON_PIO_IRQ_MASK(KEYS_BASE, 0x7); // enable interrupts for two right buttons.
 	alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
 }
 
 void nextState(enum OpperationMode *currentMode){
-	if (InSafeState() && (IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) & (1<<17)) && ((*currentMode) == Mode3)){
+	if (InSafeState() && (IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) & (1<<17)) && (((*currentMode) == Mode3) || (*currentMode) == Mode4)){
 
 	}else {
 		CurrentState++;
@@ -372,6 +361,8 @@ void NSEW_ped_isr(void* context, alt_u32 id) {
 			current_red_led = current_red_led | 0b10;
 			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_RED_BASE, current_red_led);
 		}
+	} else if (!(buttonValue & 1<<2) && *currentMode == Mode4) {
+		handle_vehicle_button(currentMode);
 	}
 	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(KEYS_BASE, 0);
 }
@@ -381,14 +372,57 @@ void configurable_tlc(enum OpperationMode *currentMode){
 	//timeout_data_handler(currentMode);
 }
 
+void camera_tlc(enum OpperationMode *currentMode){
+	pedestrian_tlc();
+}
+
+void handle_vehicle_button(enum OpperationMode *currentMode){
+	even_button = 1 - even_button;
+
+	if (CurrentState == 0 || CurrentState == 3){
+		//Start timer
+		if (even_button == 1){ //check if button is even
+			if(camera_has_started == 0){ //Odd button press
+				alt_alarm_start(&CameraTimer, CAMERA_TIMEOUT, camera_timer_isr, (void*) currentMode); //Start the timer
+				camera_has_started = 1;
+				fprintf(fp,"Camera activated \n\r");
+			}
+
+		}
+		else if(camera_has_started == 1){
+			alt_alarm_stop(&CameraTimer);
+			fprintf(fp,"Vehicle left \n\r");
+			camera_has_started = 0;
+
+
+		}
+	} else if (CurrentState == 1 || CurrentState == 4){
+		if (even_button == 1){
+			takeSnapshot();
+		}
+	}
+}
+
+alt_u32 camera_timer_isr(void* context, alt_u32 id){
+	enum OpperationMode *currentMode = (unsigned int*) context;
+	camera_has_started = 0;
+	takeSnapshot();
+	return 0;
+	//If timer expiered call takeSnapshot()
+	//
+}
+
+void takeSnapshot(void){
+	fprintf(fp,"Snapshot taken \n\r");
+	even_button = 0;
+}
+
 void timeout_data_handler(enum OpperationMode *currentMode){
 	//If the traffic lights are in a safe state, in mode 3+ and switch 17 is asserted, pole uart for new timeout values.
-	printf("Current mode timeout: %d\n", *currentMode);
 
 	if ((*currentMode == 3 || *currentMode == 4)) { //Mode 3 or 4 only.
 
 		if (InSafeState()) { //Only update time values when in a safe state. (Red Red)
-			printf("Is in safe\n");
 			unsigned int modeSwitchValue = IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE);
 			if ((modeSwitchValue & 1<<17)) { // Check if switch 17 is asserted high (Indicating new timeout values).
 				//if (fp != NULL) { //Ensure the serial connection is valid.
@@ -404,7 +438,7 @@ void timeout_data_handler(enum OpperationMode *currentMode){
 			}else{
 				recieve_new_shit = 0;
 
-				printf("Restart the timer lul \n.");
+				//printf("Restart the timer lul \n.");
 			}
 		}
 	}
