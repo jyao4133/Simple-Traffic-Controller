@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project>
-	<configuration id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.751024570" name="Nios II">
+	<configuration id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.147807282" name="Nios II">
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="altera.tool.Nios2GCCBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
@@ -1382,7 +1382,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1394,7 +1394,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1406,7 +1406,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1418,7 +1418,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1430,7 +1430,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1442,7 +1442,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1454,7 +1454,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1466,7 +1466,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1478,7 +1478,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1490,7 +1490,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1502,7 +1502,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1514,7 +1514,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1526,7 +1526,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1538,7 +1538,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1550,7 +1550,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1562,7 +1562,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1574,7 +1574,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1586,7 +1586,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1598,7 +1598,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1610,7 +1610,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1622,7 +1622,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1634,7 +1634,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1646,7 +1646,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1658,7 +1658,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1670,7 +1670,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1682,7 +1682,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1694,7 +1694,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1706,7 +1706,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1718,7 +1718,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1730,7 +1730,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1742,7 +1742,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1754,7 +1754,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1766,7 +1766,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1778,7 +1778,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1790,7 +1790,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1802,7 +1802,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1814,7 +1814,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1826,7 +1826,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1838,7 +1838,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1850,7 +1850,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1862,7 +1862,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1874,7 +1874,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1886,7 +1886,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1898,7 +1898,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1910,7 +1910,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1922,7 +1922,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1934,7 +1934,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1946,7 +1946,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1958,7 +1958,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1970,7 +1970,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1982,7 +1982,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1994,7 +1994,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2006,7 +2006,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2018,7 +2018,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2030,7 +2030,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2042,7 +2042,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2054,7 +2054,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2066,7 +2066,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2078,7 +2078,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2090,7 +2090,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2102,7 +2102,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2114,7 +2114,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2126,7 +2126,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2138,7 +2138,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2150,7 +2150,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2162,7 +2162,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2174,7 +2174,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2186,7 +2186,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2198,7 +2198,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2210,7 +2210,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2222,7 +2222,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2234,7 +2234,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2246,7 +2246,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2258,7 +2258,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2270,7 +2270,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2282,7 +2282,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2294,7 +2294,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2306,7 +2306,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2318,7 +2318,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2330,7 +2330,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2342,7 +2342,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2354,7 +2354,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2366,7 +2366,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2378,7 +2378,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2404,7 +2404,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2416,7 +2416,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2428,7 +2428,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2440,7 +2440,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2452,7 +2452,7 @@
 						<entry kind="includePath" name="/Assignment1_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
-						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1-Copy/software/Assignment1_bsp"/>
+						<entry kind="includePath" name="D:/Users/Jacob/Desktop/CS303-A1/software/Assignment1_bsp"/>
 						<entry kind="includePath" name="/Assignment1_bsp/drivers/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
