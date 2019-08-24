@@ -1,0 +1,86 @@
+19:36:51 **** Incremental Build of configuration Nios II for project Lab2 ****
+make all 
+Info: Building ../Lab2_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab2_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab2_bsp//HAL/inc -I../Lab2_bsp/ -I../Lab2_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:61:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../Lab2_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c:76:18: warning: passing argument 1 of 'fgetc' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   letter = fgetc(fp);
+                  ^
+In file included from c:\intelfpga_lite\16.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from hello_world.c:1:
+c:\intelfpga_lite\16.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:227:5: note: expected 'FILE * {aka struct __sFILE *}' but argument is of type 'volatile FILE * {aka volatile struct __sFILE *}'
+ int _EXFUN(fgetc, (FILE *));
+     ^
+hello_world.c:95:7: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+       memset(New_Timeout, 0, sizeof(New_Timeout));
+       ^
+hello_world.c:95:7: warning: incompatible implicit declaration of built-in function 'memset'
+hello_world.c:95:7: note: include '<string.h>' or provide a declaration of 'memset'
+hello_world.c:95:14: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+       memset(New_Timeout, 0, sizeof(New_Timeout));
+              ^
+hello_world.c:95:14: note: expected 'void *' but argument is of type 'volatile char *'
+hello_world.c:107:42: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+      valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                          ^
+hello_world.c:26:5: note: expected 'char *' but argument is of type 'volatile char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:117:6: warning: incompatible implicit declaration of built-in function 'memset'
+      memset(New_Timeout, 0, sizeof(New_Timeout));
+      ^
+hello_world.c:117:6: note: include '<string.h>' or provide a declaration of 'memset'
+hello_world.c:117:13: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      memset(New_Timeout, 0, sizeof(New_Timeout));
+             ^
+hello_world.c:117:13: note: expected 'void *' but argument is of type 'volatile char *'
+hello_world.c:129:22: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex);
+                      ^
+In file included from hello_world.c:3:0:
+../Lab2_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:280:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:400:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);
+                     ^
+In file included from hello_world.c:3:0:
+../Lab2_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:421:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:421:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:437:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+Info: Linking Lab2.elf
+nios2-elf-g++  -T'../Lab2_bsp//linker.x' -msys-crt0='../Lab2_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab2_bsp/   -Wl,-Map=Lab2.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o Lab2.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert Lab2.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "C:/Users/user/Desktop/303assignment/CS303-A1" --sopcinfo C:/Users/user/Desktop/303assignment/CS303-A1/software/Lab2_bsp/../../nios2_system.sopcinfo
+Info: (Lab2.elf) 83 KBytes program size (code + initialized data).
+Info:            8100 KBytes free for stack + heap.
+Info: Creating Lab2.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab2.elf >Lab2.objdump
+[Lab2 build complete]
+
+19:36:54 Build Finished (took 2s.492ms)
+

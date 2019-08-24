@@ -1,3 +1,4 @@
-activeuserprofiles=EN-337547;Team
+activeuserprofiles=DESKTOP-8M6EPEQ;Team
 eclipse.preferences.version=1
-org.eclipse.rse.systemtype.local.systemType.defaultUserId=jall229
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=user
+useridperkey=DESKTOP-8M6EPEQ.Local\=user;
