@@ -1,0 +1,180 @@
+18:50:17 **** Incremental Build of configuration Nios II for project handin ****
+make all 
+Info: Building ../handin_bsp/
+C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../handin_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../handin_bsp//HAL/inc -I../handin_bsp/ -I../handin_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'main':
+hello_world.c:72:18: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex); //Start the timer
+                  ^
+In file included from hello_world.c:3:0:
+../handin_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c:85:18: warning: passing argument 1 of 'fgetc' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   letter = fgetc(fp);
+                  ^
+In file included from c:\intelfpga\16.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from hello_world.c:1:
+c:\intelfpga\16.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:227:5: note: expected 'FILE * {aka struct __sFILE *}' but argument is of type 'volatile FILE * {aka volatile struct __sFILE *}'
+ int _EXFUN(fgetc, (FILE *));
+     ^
+hello_world.c:91:54: warning: multi-character character constant [-Wmultichar]
+     if(letter != '\r' && letter != '\n' && letter != '\n\r'){ //Keep retreiving new values untill the \n value is received.
+                                                      ^
+hello_world.c:94:7: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+       memset(New_Timeout, 0, sizeof(New_Timeout));
+       ^
+hello_world.c:94:7: warning: incompatible implicit declaration of built-in function 'memset'
+hello_world.c:94:7: note: include '<string.h>' or provide a declaration of 'memset'
+hello_world.c:94:14: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+       memset(New_Timeout, 0, sizeof(New_Timeout));
+              ^
+hello_world.c:94:14: note: expected 'void *' but argument is of type 'volatile char *'
+hello_world.c:105:42: warning: passing argument 1 of 'ParseNewTimeout' from incompatible pointer type [-Wincompatible-pointer-types]
+      valid_new_timeout = ParseNewTimeout(&New_Timeout, New_Timeout_Index);
+                                          ^
+hello_world.c:28:5: note: expected 'char *' but argument is of type 'volatile char (*)[40]'
+ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index);
+     ^
+hello_world.c:112:6: warning: incompatible implicit declaration of built-in function 'memset'
+      memset(New_Timeout, 0, sizeof(New_Timeout));
+      ^
+hello_world.c:112:6: note: include '<string.h>' or provide a declaration of 'memset'
+hello_world.c:112:13: warning: passing argument 1 of 'memset' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      memset(New_Timeout, 0, sizeof(New_Timeout));
+             ^
+hello_world.c:112:13: note: expected 'void *' but argument is of type 'volatile char *'
+hello_world.c:123:22: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex);
+                      ^
+In file included from hello_world.c:3:0:
+../handin_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c: In function 'init_buttons_pio':
+hello_world.c:273:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context, NSEW_ped_isr);
+  ^
+hello_world.c: In function 'handle_vehicle_button':
+hello_world.c:390:21: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     alt_alarm_start(&CameraTimer, CAMERA_TIMEOUT, camera_timer_isr, (void*) currentMode); //Start the timer
+                     ^
+In file included from hello_world.c:3:0:
+../handin_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c:390:51: warning: passing argument 3 of 'alt_alarm_start' from incompatible pointer type [-Wincompatible-pointer-types]
+     alt_alarm_start(&CameraTimer, CAMERA_TIMEOUT, camera_timer_isr, (void*) currentMode); //Start the timer
+                                                   ^
+In file included from hello_world.c:3:0:
+../handin_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_u32 (*)(void *) {aka long unsigned int (*)(void *)}' but argument is of type 'alt_u32 (*)(void *, alt_u32) {aka long unsigned int (*)(void *, long unsigned int)}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c:392:21: warning: passing argument 1 of 'alt_alarm_start' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     alt_alarm_start(&TimerInIntersection, INTERSECTION_TIMEOUT, in_intersection_timer_isr, (void*) currentMode);
+                     ^
+In file included from hello_world.c:3:0:
+../handin_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c:392:65: warning: passing argument 3 of 'alt_alarm_start' from incompatible pointer type [-Wincompatible-pointer-types]
+     alt_alarm_start(&TimerInIntersection, INTERSECTION_TIMEOUT, in_intersection_timer_isr, (void*) currentMode);
+                                                                 ^
+In file included from hello_world.c:3:0:
+../handin_bsp//HAL/inc/sys/alt_alarm.h:67:12: note: expected 'alt_u32 (*)(void *) {aka long unsigned int (*)(void *)}' but argument is of type 'alt_u32 (*)(void *, alt_u32) {aka long unsigned int (*)(void *, long unsigned int)}'
+ extern int alt_alarm_start (alt_alarm* the_alarm, 
+            ^
+hello_world.c:393:13: warning: passing argument 1 of 'fprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     fprintf(fp,"Camera activated \n\r");
+             ^
+In file included from c:\intelfpga\16.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from hello_world.c:1:
+c:\intelfpga\16.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:211:5: note: expected 'FILE * restrict {aka struct __sFILE * restrict}' but argument is of type 'volatile FILE * {aka volatile struct __sFILE *}'
+ int _EXFUN(fprintf, (FILE *__restrict, const char *__restrict, ...)
+     ^
+hello_world.c:398:19: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    alt_alarm_stop(&CameraTimer);
+                   ^
+In file included from hello_world.c:3:0:
+../handin_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:399:19: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    alt_alarm_stop(&TimerInIntersection);
+                   ^
+In file included from hello_world.c:3:0:
+../handin_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c:400:12: warning: passing argument 1 of 'fprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    fprintf(fp,"Vehicle left after %d milliseconds \n\r", time_in_intersection);
+            ^
+In file included from c:\intelfpga\16.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from hello_world.c:1:
+c:\intelfpga\16.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:211:5: note: expected 'FILE * restrict {aka struct __sFILE * restrict}' but argument is of type 'volatile FILE * {aka volatile struct __sFILE *}'
+ int _EXFUN(fprintf, (FILE *__restrict, const char *__restrict, ...)
+     ^
+hello_world.c:409:19: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+    alt_alarm_stop(&TimerInIntersection);
+                   ^
+In file included from hello_world.c:3:0:
+../handin_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c: In function 'handle_intersection_timer':
+hello_world.c:417:18: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   alt_alarm_stop(&TimerInIntersection);
+                  ^
+In file included from hello_world.c:3:0:
+../handin_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c: In function 'camera_timer_isr':
+hello_world.c:423:23: warning: unused variable 'currentMode' [-Wunused-variable]
+  enum OpperationMode *currentMode = (unsigned int*) context;
+                       ^
+hello_world.c: In function 'in_intersection_timer_isr':
+hello_world.c:432:23: warning: unused variable 'currentMode' [-Wunused-variable]
+  enum OpperationMode *currentMode = (unsigned int*) context;
+                       ^
+hello_world.c: In function 'takeSnapshot':
+hello_world.c:440:10: warning: passing argument 1 of 'fprintf' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  fprintf(fp,"Snapshot taken \n\r");
+          ^
+In file included from c:\intelfpga\16.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:29:0,
+                 from hello_world.c:1:
+c:\intelfpga\16.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:211:5: note: expected 'FILE * restrict {aka struct __sFILE * restrict}' but argument is of type 'volatile FILE * {aka volatile struct __sFILE *}'
+ int _EXFUN(fprintf, (FILE *__restrict, const char *__restrict, ...)
+     ^
+hello_world.c: In function 'timeout_data_handler':
+hello_world.c:458:21: warning: passing argument 1 of 'alt_alarm_stop' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+      alt_alarm_stop(&timer);
+                     ^
+In file included from hello_world.c:3:0:
+../handin_bsp//HAL/inc/sys/alt_alarm.h:77:13: note: expected 'alt_alarm * {aka struct alt_alarm_s *}' but argument is of type 'volatile alt_alarm * {aka volatile struct alt_alarm_s *}'
+ extern void alt_alarm_stop (alt_alarm* the_alarm);
+             ^
+hello_world.c: In function 'ParseNewTimeout':
+hello_world.c:479:10: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  token = strtok(New_Timeout, ",");
+          ^
+hello_world.c:479:8: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  token = strtok(New_Timeout, ",");
+        ^
+hello_world.c:495:9: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   token = strtok(NULL, ",");
+         ^
+Info: Linking handin.elf
+nios2-elf-g++  -T'../handin_bsp//linker.x' -msys-crt0='../handin_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../handin_bsp/   -Wl,-Map=handin.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o handin.elf obj/default/hello_world.o -lm -msys-lib=m
+nios2-elf-insert handin.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name nios2_system --quartus_project_dir "D:/303" --sopcinfo D:/303/software/handin_bsp/../../nios2_system.sopcinfo
+Info: (handin.elf) 84 KBytes program size (code + initialized data).
+Info:              8100 KBytes free for stack + heap.
+Info: Creating handin.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source handin.elf >handin.objdump
+[handin build complete]
+
+18:50:21 Build Finished (took 3s.630ms)
+

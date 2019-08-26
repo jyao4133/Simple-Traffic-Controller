@@ -7,6 +7,7 @@
 // #Defines
 #define LIGHT_TRANSITION_TIME 1000
 #define CAMERA_TIMEOUT 2000
+#define INTERSECTION_TIMEOUT 1
 #define NEW_TIMEOUT_LENGTH 40
 #define NUMBER_OF_TIMEOUT_VALUES 6
 // ENUMS
@@ -29,23 +30,26 @@ void nextState(enum OpperationMode *currentMode);
 void camera_tlc(enum OpperationMode *currentMode);
 void handle_vehicle_button(enum OpperationMode *currentMode);
 alt_u32 camera_timer_isr(void* context, alt_u32 id);
+alt_u32 in_intersection_timer_isr(void* context, alt_u32 id);
 void takeSnapshot(void);
-
+void handle_intersection_timer();
 
 // Global variables
 volatile alt_alarm timer;
 volatile alt_alarm CameraTimer;
+volatile alt_alarm TimerInIntersection;
 volatile int camera_has_started = 0;
 volatile int even_button = 0;
 volatile int timer_has_started = 0;
+volatile int time_in_intersection = 0;
 // Mode variables
 volatile int CurrentState = 0;
 // Different timers
 volatile int t0 = 9000;
-volatile int t1 = 9000;
+volatile int t1 = 100;
 volatile int t2 = 9000;
 volatile int t3 = 9000;
-volatile int t4 = 9000;
+volatile int t4 = 100;
 volatile int t5 = 9000;
 volatile int currentTimeOut = 6000;
 // Pedestrian flags
@@ -385,13 +389,16 @@ void handle_vehicle_button(enum OpperationMode *currentMode){
 			if(camera_has_started == 0){ //Odd button press
 				alt_alarm_start(&CameraTimer, CAMERA_TIMEOUT, camera_timer_isr, (void*) currentMode); //Start the timer
 				camera_has_started = 1;
+				alt_alarm_start(&TimerInIntersection, INTERSECTION_TIMEOUT, in_intersection_timer_isr, (void*) currentMode);
 				fprintf(fp,"Camera activated \n\r");
 			}
 
 		}
 		else if(camera_has_started == 1){
 			alt_alarm_stop(&CameraTimer);
-			fprintf(fp,"Vehicle left \n\r");
+			alt_alarm_stop(&TimerInIntersection);
+			fprintf(fp,"Vehicle left after %d milliseconds \n\r", time_in_intersection);
+			time_in_intersection = 0;
 			camera_has_started = 0;
 
 
@@ -399,10 +406,19 @@ void handle_vehicle_button(enum OpperationMode *currentMode){
 	} else if (CurrentState == 1 || CurrentState == 4){
 		if (even_button == 1){
 			takeSnapshot();
+			alt_alarm_stop(&TimerInIntersection);
+
 		}
 	}
 }
 
+void handle_intersection_timer(){
+	if (camera_has_started == 0){
+		alt_alarm_stop(&TimerInIntersection);
+		time_in_intersection = 0;
+
+	}
+}
 alt_u32 camera_timer_isr(void* context, alt_u32 id){
 	enum OpperationMode *currentMode = (unsigned int*) context;
 	camera_has_started = 0;
@@ -410,6 +426,14 @@ alt_u32 camera_timer_isr(void* context, alt_u32 id){
 	return 0;
 	//If timer expiered call takeSnapshot()
 	//
+}
+
+alt_u32 in_intersection_timer_isr(void* context, alt_u32 id){
+	enum OpperationMode *currentMode = (unsigned int*) context;
+	time_in_intersection++;
+	handle_intersection_timer();
+	return 1;
+
 }
 
 void takeSnapshot(void){

@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=C\:\\Users\\user\\Desktop\\303assignment\\CS303-A1\\software\\Lab2
-newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Users\\user\\Desktop\\303assignment\\CS303-A1\\nios2_system.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\Users\\user\\Desktop\\303assignment\\CS303-A1\\software\\Lab2_bsp
+newSoftwareExampleWizardPage.defaultLocation=D\:\\303\\software\\handin
+newSoftwareExampleWizardPage.sopcinfoFile=D\:\\303\\nios2_system.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=D\:\\303\\software\\handin_bsp
