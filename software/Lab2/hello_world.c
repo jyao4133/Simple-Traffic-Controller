@@ -45,12 +45,12 @@ volatile int time_in_intersection = 0;
 // Mode variables
 volatile int CurrentState = 0;
 // Different timers
-volatile int t0 = 9000;
-volatile int t1 = 100;
-volatile int t2 = 9000;
-volatile int t3 = 9000;
-volatile int t4 = 100;
-volatile int t5 = 9000;
+volatile int t0 = 500;
+volatile int t1 = 6000;
+volatile int t2 = 2000;
+volatile int t3 = 500;
+volatile int t4 = 6000;
+volatile int t5 = 2000;
 volatile int currentTimeOut = 6000;
 // Pedestrian flags
 volatile int EW_Ped = 0;
@@ -65,7 +65,6 @@ volatile int timer_running = 0;
 
 
 int main() {
-	printf("Compilation Complete\n");
 	enum OpperationMode currentMode = Mode1;
 	lcd_set_mode(currentMode);
 	void* CurrentModeContex = (void*) &currentMode;
@@ -74,7 +73,6 @@ int main() {
 	init_buttons_pio(CurrentModeContex);
 	fp = fopen(UART_NAME, "r+");
 	ResetAllStates();
-	printf("Got past uart open.\n");
 	int New_Timeout_Index = 0;
 	int valid_new_timeout = 0;
 
@@ -118,7 +116,6 @@ int main() {
 
 				printf("Restarting the timer\n");
 				timeout_data_handler(&currentMode);
-				printf("THIS IS RECEIEVE NEW SHIT N: %d\n", recieve_new_shit);
 				if (recieve_new_shit == 0){
 					alt_alarm_start(&timer, currentTimeOut, tlc_timer_isr, CurrentModeContex);
 					timer_running = 1;
@@ -451,8 +448,6 @@ void timeout_data_handler(enum OpperationMode *currentMode){
 			if ((modeSwitchValue & 1<<17)) { // Check if switch 17 is asserted high (Indicating new timeout values).
 				//if (fp != NULL) { //Ensure the serial connection is valid.
 				recieve_new_shit = 1;
-				printf("should stopped the timer.");
-
 				if (timer_running == 1){
 					printf("stopped the timer.");
 					alt_alarm_stop(&timer);
@@ -494,7 +489,7 @@ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index){
 		printf( " %d\n", temp );
 		token = strtok(NULL, ",");
 	}
-	printf("Finished pasing all the inputs.\n");
+	printf("Finished passing all the inputs.\n");
 	printf("Number of tokens = %d\n", numberOfTokens);
 	if (numberOfTokens == NUMBER_OF_TIMEOUT_VALUES) { //There are 6 valid numbers received. Update global times.
 		printf("Updating globals.\n");
