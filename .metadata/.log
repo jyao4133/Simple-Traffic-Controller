@@ -176,3 +176,12 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 16:41:33.297
 !MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/d/CS303-A1/software/Assignment1/Assignment1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 16:46:47.364
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 16:46:47.884
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 16:46:50.088
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/d/CS303-A1/software/Assignment1/Assignment1.elf]

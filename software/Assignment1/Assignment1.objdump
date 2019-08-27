@@ -612,7 +612,7 @@ Disassembly of section .entry:
   800014:	08409114 	ori	at,at,580
     jmp r1
   800018:	0800683a 	jmp	at
-  80001c:	00000000 	call	0 <__alt_mem_sdram-0x800000>
+  80001c:	00000000 	call	0 <__reset-0x800000>
 
 Disassembly of section .exceptions:
 
@@ -1836,7 +1836,7 @@ void pedestrian_tlc(void) {
   8009f8:	00800a84 	movi	r2,42
   8009fc:	00800ac4 	movi	r2,43
   800a00:	00800ae0 	cmpeqi	r2,zero,43
-  800a04:	00800b40 	call	800b4 <__alt_mem_sdram-0x77ff4c>
+  800a04:	00800b40 	call	800b4 <__reset-0x77ff4c>
 		case 0:
 			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100100); //NS:Red EW:Red (safe state)
   800a08:	00c00904 	movi	r3,36
@@ -5258,7 +5258,7 @@ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index){
   803834:	008042f8 	rdprs	r2,zero,267
   803838:	00804270 	cmpltui	r2,zero,265
   80383c:	00804144 	movi	r2,261
-  803840:	00803880 	call	80388 <__alt_mem_sdram-0x77fc78>
+  803840:	00803880 	call	80388 <__reset-0x77fc78>
   803844:	00804164 	muli	r2,zero,261
   803848:	008042f8 	rdprs	r2,zero,267
   80384c:	00804170 	cmpltui	r2,zero,261
@@ -12003,12 +12003,12 @@ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index){
   809fe0:	0080a890 	cmplti	r2,zero,674
   809fe4:	0080a890 	cmplti	r2,zero,674
   809fe8:	0080a4d4 	movui	r2,659
-  809fec:	0080a500 	call	80a50 <__alt_mem_sdram-0x77f5b0>
+  809fec:	0080a500 	call	80a50 <__reset-0x77f5b0>
   809ff0:	0080a890 	cmplti	r2,zero,674
   809ff4:	0080a890 	cmplti	r2,zero,674
   809ff8:	0080a890 	cmplti	r2,zero,674
   809ffc:	0080a838 	rdprs	r2,zero,672
-  80a000:	0080a500 	call	80a50 <__alt_mem_sdram-0x77f5b0>
+  80a000:	0080a500 	call	80a50 <__reset-0x77f5b0>
   80a004:	0080a890 	cmplti	r2,zero,674
   80a008:	0080a890 	cmplti	r2,zero,674
   80a00c:	0080a394 	movui	r2,654
@@ -12023,7 +12023,7 @@ int ParseNewTimeout(char *New_Timeout, int New_Timeout_Index){
   80a030:	0080a7bc 	xorhi	r2,zero,670
   80a034:	0080a890 	cmplti	r2,zero,674
   80a038:	0080a890 	cmplti	r2,zero,674
-  80a03c:	0080a480 	call	80a48 <__alt_mem_sdram-0x77f5b8>
+  80a03c:	0080a480 	call	80a48 <__reset-0x77f5b8>
   80a040:	42000204 	addi	r8,r8,8
   80a044:	da802317 	ldw	r10,140(sp)
   80a048:	5455883a 	add	r10,r10,r17
@@ -24304,7 +24304,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
   8129e4:	d9400015 	stw	r5,0(sp)
   8129e8:	d9800115 	stw	r6,4(sp)
   8129ec:	d9c00215 	stw	r7,8(sp)
-  8129f0:	00000000 	call	0 <__alt_mem_sdram-0x800000>
+  8129f0:	00000000 	call	0 <__reset-0x800000>
   8129f4:	d9400017 	ldw	r5,0(sp)
   8129f8:	d9800117 	ldw	r6,4(sp)
   8129fc:	d9c00217 	ldw	r7,8(sp)
@@ -24388,7 +24388,7 @@ alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
   812b2c:	10003226 	beq	r2,zero,812bf8 <__call_exitprocs+0x178>
   812b30:	a009883a 	mov	r4,r20
   812b34:	98800015 	stw	r2,0(r19)
-  812b38:	00000000 	call	0 <__alt_mem_sdram-0x800000>
+  812b38:	00000000 	call	0 <__reset-0x800000>
   812b3c:	9d000017 	ldw	r20,0(r19)
   812b40:	a03fe41e 	bne	r20,zero,812ad4 <__alt_mem_onchip_mem+0xff80aad4>
   812b44:	dfc00a17 	ldw	ra,40(sp)

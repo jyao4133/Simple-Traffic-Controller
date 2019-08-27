@@ -45,18 +45,18 @@ volatile int time_in_intersection = 0;
 // Mode variables
 volatile int CurrentState = 0;
 // Different timers
-volatile int t0 = 500;
-volatile int t1 = 6000;
-volatile int t2 = 2000;
-volatile int t3 = 500;
-volatile int t4 = 6000;
-volatile int t5 = 2000;
-//volatile int t0 = 7000;
-//volatile int t1 = 7000;
-//volatile int t2 = 7000;
-//volatile int t3 = 7000;
-//volatile int t4 = 7000;
-//volatile int t5 = 7000;
+//volatile int t0 = 500;
+//volatile int t1 = 6000;
+//volatile int t2 = 2000;
+//volatile int t3 = 500;
+//volatile int t4 = 6000;
+//volatile int t5 = 2000;
+volatile int t0 = 7000;
+volatile int t1 = 7000;
+volatile int t2 = 7000;
+volatile int t3 = 7000;
+volatile int t4 = 7000;
+volatile int t5 = 7000;
 volatile int currentTimeOut = 6000;
 // Pedestrian flags
 volatile int EW_Ped = 0;
